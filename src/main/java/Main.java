@@ -3,21 +3,21 @@ import ru.netology.stats.StatsService;
 public class Main {
     public static void main(String[] args) {
 
-        int[] arrayOfSalesData = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] Sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         StatsService service = new StatsService();
 
-        int mathematicalSum = service.calcSalesService(arrayOfSalesData);
+        long mathematicalSum = service.calcSalesService(Sales);
 
-        int averageMonthlySaleAmount = service.calcAverageAmountService(arrayOfSalesData);
+        long averageMonthlySaleAmount = service.calcAverageAmountService(Sales);
 
-        int numberMonthMaxAmount = service.calcMaxAmountService(arrayOfSalesData);
+        long numberMonthMaxAmount = service.calcMaxAmountService(Sales);
 
-        int numberMonthMinAmount = service.calcMinAmountService(arrayOfSalesData);
+        long numberMonthMinAmount = service.calcMinAmountService(Sales);
 
-        int counterMonthsBelowAverage = service.calcMonthsBelowAverageService(arrayOfSalesData);
+        long counterMonthsBelowAverage = service.calcMonthsBelowAverageService(Sales);
 
-        int counterMonthsAboveAverage = service.calcMonthsAboveAverageService(arrayOfSalesData);
+        long counterMonthsAboveAverage = service.calcMonthsAboveAverageService(Sales);
 
         System.out.println("Сумма всех вырученных денег от продаж " + mathematicalSum);
         System.out.println();

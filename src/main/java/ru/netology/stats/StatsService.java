@@ -2,66 +2,66 @@ package ru.netology.stats;
 
 public class StatsService {
 
-    public int calcSalesService(int[] arrayOfSalesData) {
+    public long calcSalesService(long[] Sales) {
 
-        int mathematicalSum = 0; // общая сумма всех продаж
+        long mathematicalSum = 0; // общая сумма всех продаж
 
-        for (int i = 0; i < arrayOfSalesData.length; i++) {
+        for (int i = 0; i < Sales.length; i++) {
 
-            mathematicalSum = mathematicalSum + arrayOfSalesData[i];
+            mathematicalSum = mathematicalSum + Sales[i];
         }
         return mathematicalSum;
 
     }
 
-    public int calcAverageAmountService(int[] arrayOfSalesData) {
+    public long calcAverageAmountService(long[] Sales) {
 
-        int mathematicalSum = calcSalesService(arrayOfSalesData);
+        long mathematicalSum = calcSalesService(Sales);
 
-        int averageMonthlySaleAmount = mathematicalSum / arrayOfSalesData.length; // среднемесячная сумма от продаж
+        long averageMonthlySaleAmount = mathematicalSum / Sales.length; // среднемесячная сумма от продаж
 
         return averageMonthlySaleAmount;
     }
 
-    public int calcMaxAmountService(int[] arrayOfSalesData) {
+    public int calcMaxAmountService(long[] Sales) {
 
         int numberMonthMaxAmount = 0;  // номер последнего месяца, с максимальной суммой от продаж
-        int maxAmount = 0; // максимальная сумма от продаж среди всех месяцев
+        long maxAmount = 0; // максимальная сумма от продаж среди всех месяцев
 
-        for (int i = 0; i < arrayOfSalesData.length; i++) {
+        for (int i = 0; i < Sales.length; i++) {
 
-            if (arrayOfSalesData[i] >= maxAmount) {
-                maxAmount = arrayOfSalesData[i];
+            if (Sales[i] >= maxAmount) {
+                maxAmount = Sales[i];
                 numberMonthMaxAmount = i+1;
             }
         }
         return numberMonthMaxAmount;
     }
 
-    public int calcMinAmountService(int[] arrayOfSalesData) {
+    public int calcMinAmountService(long[] Sales) {
 
         int numberMonthMinAmount = 0;  // номер последнего месяца, с минимальной суммой от продаж
-        int minAmount = arrayOfSalesData[0]; // минимальная сумма за весь период продаж
+        long minAmount = Sales[0]; // минимальная сумма за весь период продаж
 
-        for (int i = 0; i < arrayOfSalesData.length; i++) {
+        for (int i = 0; i < Sales.length; i++) {
 
-            if (arrayOfSalesData[i] <= minAmount) {
-                minAmount = arrayOfSalesData[i];
+            if (Sales[i] <= minAmount) {
+                minAmount = Sales[i];
                 numberMonthMinAmount = i+1;
             }
         }
         return numberMonthMinAmount;
     }
 
-    public int calcMonthsBelowAverageService(int[] arrayOfSalesData) {
+    public int calcMonthsBelowAverageService(long[] Sales) {
 
         int counterMonthsBelowAverage = 0; // счётчик месяцев
 
-        int averageMonthlySaleAmount = calcAverageAmountService(arrayOfSalesData);
+        long averageMonthlySaleAmount = calcAverageAmountService(Sales);
 
-        for (int i = 0; i < arrayOfSalesData.length; i++) {
+        for (int i = 0; i < Sales.length; i++) {
 
-            if (arrayOfSalesData[i] < averageMonthlySaleAmount) {
+            if (Sales[i] < averageMonthlySaleAmount) {
                 counterMonthsBelowAverage = counterMonthsBelowAverage + 1; // количество месяцев с выручками от продаж ниже среднемесячной
             }
         }
@@ -70,15 +70,15 @@ public class StatsService {
 
     }
 
-    public int calcMonthsAboveAverageService(int[] arrayOfSalesData) {
+    public int calcMonthsAboveAverageService(long[] Sales) {
 
         int counterMonthsAboveAverage = 0; // счётчик месяцев
 
-        int averageMonthlySaleAmount = calcAverageAmountService(arrayOfSalesData);
+        long averageMonthlySaleAmount = calcAverageAmountService(Sales);
 
-        for (int i = 0; i < arrayOfSalesData.length; i++) {
+        for (int i = 0; i < Sales.length; i++) {
 
-            if (arrayOfSalesData[i] > averageMonthlySaleAmount) {
+            if (Sales[i] > averageMonthlySaleAmount) {
                 counterMonthsAboveAverage = counterMonthsAboveAverage + 1; // количество месяцев с выручками от продаж выше среднемесячной
             }
         }

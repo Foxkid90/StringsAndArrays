@@ -11,10 +11,10 @@ public class StatsServiceTest {
 
         StatsService service = new StatsService();
 
-        int[] arrayOfSalesData = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] Sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int expectedSum = 180;
-        int actualSum = service.calcSalesService(arrayOfSalesData);
+        long expectedSum = 180;
+        long actualSum = service.calcSalesService(Sales);
 
         Assertions.assertEquals(expectedSum, actualSum);
     }
@@ -25,10 +25,10 @@ public class StatsServiceTest {
 
         StatsService service = new StatsService();
 
-        int[] arrayOfSalesData = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] Sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int expectedAvSum = 15;
-        int actualAvSum = service.calcAverageAmountService(arrayOfSalesData);
+        long expectedAvSum = 15;
+        long actualAvSum = service.calcAverageAmountService(Sales);
 
         Assertions.assertEquals(expectedAvSum, actualAvSum);
     }
@@ -39,10 +39,10 @@ public class StatsServiceTest {
 
         StatsService service = new StatsService();
 
-        int[] arrayOfSalesData = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] Sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedNumMonth = 8;
-        int actualNumMonth = service.calcMaxAmountService(arrayOfSalesData);
+        int actualNumMonth = service.calcMaxAmountService(Sales);
 
         Assertions.assertEquals(expectedNumMonth, actualNumMonth);
     }
@@ -53,10 +53,10 @@ public class StatsServiceTest {
 
         StatsService service = new StatsService();
 
-        int[] arrayOfSalesData = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] Sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedNumMonth = 9;
-        int actualNumMonth = service.calcMinAmountService(arrayOfSalesData);
+        int actualNumMonth = service.calcMinAmountService(Sales);
 
         Assertions.assertEquals(expectedNumMonth, actualNumMonth);
     }
@@ -67,10 +67,10 @@ public class StatsServiceTest {
 
         StatsService service = new StatsService();
 
-        int[] arrayOfSalesData = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] Sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedBelowAv = 5;
-        int actualBelowAv = service.calcMonthsBelowAverageService(arrayOfSalesData);
+        int actualBelowAv = service.calcMonthsBelowAverageService(Sales);
 
         Assertions.assertEquals(expectedBelowAv, actualBelowAv);
     }
@@ -81,10 +81,10 @@ public class StatsServiceTest {
 
         StatsService service = new StatsService();
 
-        int[] arrayOfSalesData = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] Sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedAboveAv = 5;
-        int actualAboveAv = service.calcMonthsAboveAverageService(arrayOfSalesData);
+        int actualAboveAv = service.calcMonthsAboveAverageService(Sales);
 
         Assertions.assertEquals(expectedAboveAv, actualAboveAv);
     }
