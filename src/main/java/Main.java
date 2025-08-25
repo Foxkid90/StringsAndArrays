@@ -3,21 +3,21 @@ import ru.netology.stats.StatsService;
 public class Main {
     public static void main(String[] args) {
 
-        long[] Sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         StatsService service = new StatsService();
 
-        long mathematicalSum = service.calcSalesService(Sales);
+        long mathematicalSum = service.calcSalesService(sales);
 
-        long averageMonthlySaleAmount = service.calcAverageAmountService(Sales);
+        long averageMonthlySaleAmount = service.calcAverageAmountService(sales);
 
-        long numberMonthMaxAmount = service.calcMaxAmountService(Sales);
+        long numberMonthMaxAmount = service.calcMaxAmountService(sales);
 
-        long numberMonthMinAmount = service.calcMinAmountService(Sales);
+        long numberMonthMinAmount = service.calcMinAmountService(sales);
 
-        long counterMonthsBelowAverage = service.calcMonthsBelowAverageService(Sales);
+        long counterMonthsBelowAverage = service.calcMonthsBelowAverageService(sales);
 
-        long counterMonthsAboveAverage = service.calcMonthsAboveAverageService(Sales);
+        long counterMonthsAboveAverage = service.calcMonthsAboveAverageService(sales);
 
         System.out.println("Сумма всех вырученных денег от продаж " + mathematicalSum);
         System.out.println();
@@ -30,11 +30,6 @@ public class Main {
         System.out.println("Количество месяцев с выручкой меньше среднемесячной составляет " + counterMonthsBelowAverage);
         System.out.println();
         System.out.println("Количество месяцев с выручкой больше среднемесячной составляет " + counterMonthsAboveAverage);
-
-
-
-
-
 
 
     }
